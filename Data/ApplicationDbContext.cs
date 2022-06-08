@@ -10,7 +10,7 @@ namespace PortfolioWebShop.Data
             : base(options)
         {
         }
-        DbSet<Product> Products { get; set; }
-        DbSet<ProductImage> ProductImages { get; set; }
+        public DbSet<Product> Products { get; set; }
+        public DbSet<ProductImage> ProductImages { get; set; }
     }
 }
