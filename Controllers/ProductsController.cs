@@ -18,7 +18,32 @@ namespace PortfolioWebShop.Controllers
         {
             _context = context;
         }
+        public async Task<IActionResult> get10_returnView()
+        {
+            //var t = _context.Products.Take(10).ToList();
+            
+            List<Product> t = new List<Product>();
+            for (int i = 0; i < 10; i++)
+            {
+                Product P = new Product(10, 4);
+                t.Add(P);
+            }
+           
 
+            return View(t);
+        }
+        public List<Product> get10_returnListOfProducs()
+        {
+            //var t = _context.Products.Take(10).ToList();
+
+            List<Product> t = new List<Product>();
+            for (int i = 0; i < 10; i++)
+            {
+                Product P = new Product(10, 4);
+                t.Add(P);
+            }
+            return t;
+        }
         // GET: Products
         public async Task<IActionResult> Index()
         {
